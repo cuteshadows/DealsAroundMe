@@ -1,0 +1,28 @@
+<?php
+	session_start();
+?>
+<html>
+<head>
+<title>User Home</title>
+<link rel="stylesheet" href="login8.css">
+</head>
+<body>
+	<h2><center>HomePage</center></h2>
+	<h3>Welcome
+	<?php
+		echo $_SESSION['username'];
+	?>
+	<br><br><br><br><br><br><br><br>
+	<div class="container" style="background-color:#f1f1f1">
+    <button name="logout_btn" type="submit" class="cancelbtn">Logout</button>
+	</div>
+	
+	<?php
+		if(isset($_POST['logout_btn']))
+		{
+			session_destroy();
+			header('location:login.php');
+	?>
+	
+</body>
+</html>

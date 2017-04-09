@@ -1,0 +1,31 @@
+body{
+	background-color:#3498db;
+}
+.heading{
+	text-align:center;
+	width:100%;
+}
+.img-circle {
+    border-radius: 50%;
+	margin-top:100px;
+}
+
+#option1{
+	margin-left:190px;
+}
+
+#option2{
+	margin-left:360px;
+}
+
+#text1{
+	float:right;
+	width:50%;
+	text-align:center;
+}
+
+#text2{
+	float:right;
+	width:50%;
+	text-align:center;
+}

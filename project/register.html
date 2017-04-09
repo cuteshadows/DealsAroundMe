@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Register</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div id="fcontainer">
+<h2><center>Registeration Form</center></h2>
+<form action="/action_page.php">
+<div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+	<label><b>Confirm Password</b></label>
+    <input type="password" placeholder="Retype Password" name="rpsw" required>
+	
+	<label><b>Profile Picture</b></label><br>
+	<input type="file" name="pic" accept="image/*"><br><br>
+    <button type="submit">Submit</button>
+  </div>
+<div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="back_btn">Back</button>
+</div>
+</form>
+</div>
+
+</body>
+</html>
