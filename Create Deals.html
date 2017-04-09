@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create Deals</title>
+		<link rel="icon" type="image/css" href="logome_tumb.jpg">
+		<style>
+			body
+			{	
+
+				background-color: #000000;
+				background-image: url("background2.jpg");
+				background-position: center;	
+			}
+			.topbar
+			{
+				margin: auto;
+				width: 100%;
+				height: 10%;
+				background-color: rgba(228,0,70,0.9);
+				overflow: auto;
+				padding: 0.3%,0.6%,0.3%,0.6%;
+			}
+			.labeltext
+			{
+				color: #e40046;
+				font-family: Arial, Helvetica, sans-serif;
+			}	
+			input[type=text], input[type=password], input[type=number], input[type=date]
+			{
+				width: 45%;
+				padding: 12px 20px;
+				margin: 8px 0;
+				display: inline-block;
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+			}
+			input[type=text]:focus 
+			{
+				width: 100%;<!--bar width increasing while clicking-->
+			}
+			input[type=number]:focus 
+			{
+				width: 100%;<!--bar width increasing while clicking-->
+			}
+			<!--input[type=date]:focus -->
+			{
+				width: 100%;<!--bar width increasing while clicking-->
+			}
+			.opaque
+			{
+				background-color: rgba(0,0,0,0.8);
+				width: 45%;
+				top:50px;
+				float: right;
+				padding: 14px 20px;
+				
+			}
+			button
+			{
+				background-color: #e40046;
+				font-size: 130%;
+				color: white;
+				padding: 14px 20px;
+				margin: 8px 0;
+				border: none;
+				cursor: pointer;
+				width: 30%;
+			}
+			.buttonsmall
+			{
+				background-color: #4db8ff;
+				font-size: 120%;
+				color: white;
+				padding: 14px 14px;
+				margin: 8px 0;
+				border: none;
+				cursor: pointer;
+				width: 20%;
+			}
+			.usersection
+			{
+
+				padding: 1px 1px 1px 1px;
+				top:9.5%;
+				width: 99%;
+			}
+		</style>		
+	</head>
+	<body>
+		<div class="topbar">
+				<a href="https://www.google.co.in"><!--go to home page-->
+				<img src="topbar_icon.jpg" alt="dealsaroundme_icon" style="float: left;" width="20.1%"></a>
+				<div class="usersection">
+					<a href="https://www.google.co.in"><!--go to logout section-->
+					<img src="logoutuser.jpg" alt="user" style="float: right;" width="4.5%"></a>
+					
+				</div>
+		</div>
+		<br><br>
+			<div class="opaque">
+			<!--<form action="/action_page.php" autocomplete="on">
+				<!--<div class="opaque">-->
+				<form action="/action_page.php" autocomplete="on">
+					<div class="labeltext">
+					<b>
+						<label>Deal Id</label>
+						<br><input type="text" placeholder="Deal id" name="dealid" required></br>
+						<label>Seller name</label>
+						<br><input type="text" placeholder="Seller name" name="sname" required></br>
+						<label>Offer</label>
+						<br><input type="text" placeholder="Deal" name="deal" required></br>
+						<label>product name</label>
+						<br><input type="text" placeholder="product" name="product" required></br>
+						<label>Effect price</label>
+						<br><input type="number" placeholder="Amount" name="amnt" required></br>
+						<label>Valid Until</label>
+						<br><input placeholder="Till" class="labeltext" type="text" onfocus="(this.type='date')" name="datetill" id="date"required></br>
+						<br><input type="file" name="pic" accept="image/*"></button><!--Upload image--></br>
+						<button type="submit" class="buttonsmall" style="float: left;">upload</button>
+					</div>
+					<br><center><button type="submit">Publish Deal</button></center></br>
+				</form>
+				<a href="https://www.google.co.in"><!--go to index page/again reboot to add deal page-->
+				<button type="button" class="buttonsmall" style="float: left;">Cancel</button>
+				</a>
+				</b>
+			</div>
+			<!--</form>-->
+		</br></br>
+	</body>
+</html>

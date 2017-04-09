@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--this is the 1st page,it redirects to home page in 5sec-->
+<html>
+<head>
+	<title>Startup</title>
+	<link rel="icon" type="image/css" href="logome_tumb.jpg">
+	<meta http-equiv="Refresh" content="5;url=https://www.google.co.in">
+	<!--google.co is just a location to redirect,add 2nd page insted-->
+		<style> 
+			body
+			{
+				background-color: #000000;
+				background-image: url("background1.jpg");
+				background-position: center;
+				background-orgin: content-box;
+			}
+			<!--div
+			{
+				background: rgba(0,0,0,0.9);<!--colour black,90% opacity
+				filter: alpha(opacity=60);
+				background-position: relative;
+				padding: 10% 10%;
+			}-->
+			h1
+			{
+				<!--background: rgba(255,255,255,.6);-->
+				font-variant-caps: small-caps;
+				color: #e40046;
+				word-spacing: 15px;
+				letter-spacing: 3px;
+				font-family: Arial, Helvetica, sans-serif;
+				padding: 2% -10%;
+				
+			}
+			.centerdiv 
+			{
+				width: 50%;
+				height: 80%;
+				padding: 40px;
+				position: absolute;
+				vertical-align:middle;
+				background: rgba(0,0,0,0.8);<!--colour black,90% opacity-->
+				filter: alpha(opacity=60);
+				top:0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+			.buttoneffect
+			{
+				border-radius: 4px;
+				background-color: #e40046;
+				border: none;
+				color: #FFFFFF;
+				text-align: center;
+				font-size: 28px;
+				padding: 20px;
+				width: 200px;
+				transition: all 0.5s;
+				cursor: pointer;
+				margin: 5px;
+			}
+			.buttoneffect span 
+			{
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				transition: 0.5s;
+			}
+			.buttoneffect span:after 
+			{
+				content: '\00bb';
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				right: -20px;
+				transition: 0.5s;
+			}
+			.buttoneffect:hover span 
+			{
+				padding-right: 25px;
+			}
+			.buttoneffect:hover span:after 
+			{
+				opacity: 1;
+				right: 0;
+			}
+		</style>
+</head>
+<body>
+	<div class="centerdiv">
+		<center>
+			<a href="https://www.google.co.in"><!--go to next page-->
+			<img src="logo3d.jpg" width="60%" style="vertical-align:middle;" ></a>
+			<h1>Best Deals Around</h1>
+			<button type="button" class="buttoneffect" onclick="window.location.href='/2-challenge.html'"><span>Start</span></button>
+		</center>	
+	</div>
+</body>
+</html>

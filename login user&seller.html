@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<link rel="icon" type="image/css" href="logome_tumb.jpg">
+		<style>
+			body
+			{
+				background-color: #000000;
+				background-image: url("background2.jpg");
+				background-position: center;
+			}
+			input[type=text],[type=password]	
+			{
+				width: 75%;
+				padding: 14px 20px;
+				margin: 1.2% .4% 0% 4%;
+				display: inline-block;
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+			}
+			input[type=textsearch]
+			{
+				width: 35%;
+				padding: 14px 20px 12px 20px;
+				margin: 1.2% .4% 0% 4%;
+				display: inline-block;
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+			}
+			button 
+			{
+				background-color: #e40046;
+				font-size: 130%;
+				color: white;
+				padding: 14px 20px;
+				border: none;
+				cursor: pointer;
+				width: 30%;
+			}
+			.buttonsmall
+			{
+				background-color: #4db8ff;
+				font-size: 120%;
+				color: white;
+				padding: 10px 10px;
+				margin: 8px 0;
+				border: none;
+				cursor: pointer;
+				width: 15%;
+			}
+			input[type=textsearch]:focus 
+			{
+				width: 50%;
+				padding: 0.3%,0.3%,0.3%,0.3%;
+			}
+			input[type=text]:focus,[type=password]:focus 
+			{
+				width: 100%;<!--bar width increasing while clicking-->
+			}
+			input[type=date]:focus 
+			{
+				width: 100%;<!--bar width increasing while clicking-->
+			}
+			.opaque
+			{
+				background-color: rgba(0,0,0,0.8);
+				width: 50%;
+				padding: 14px 20px;
+			}
+			.searchbutton
+			{
+				position: relative;
+				top: 16px;
+				background-color: #000000;
+				border: none;
+				color: #e40046;
+				font-size: 170%;
+				padding: .5% .5%;
+				width: 10%;
+				text-align: center;
+				-webkit-transition-duration: 0.4s; 
+				transition-duration: 0.4s;
+				text-decoration: none;
+				overflow: hidden;
+				cursor: pointer;
+			}
+			.searchbutton:after 
+			{
+				content: "";
+				background: #00e4ff;
+				display: block;
+				position: absolute;
+				padding-top: 300%;
+				padding-left: 350%;
+				margin-left: -20px!important;
+				margin-top: -120%;
+				opacity: 0;
+				transition: all 0.8s
+			}
+			.searchbutton:active:after 
+			{
+				padding: 0;
+				margin: 0;
+				opacity: 1;
+				transition: 0s
+			}
+			.topbar
+			{
+				margin: auto;
+				width: 100%;
+				height: 10%;
+				background-color: rgba(228,0,70,0.9);
+				overflow: auto;
+				padding: 0.3%,0.6%,0.3%,0.6%;
+			}
+			.labeltext
+			{
+				color: #e40046;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.usersection
+			{
+				padding: 1px 1px 1px 1px;
+				top:10%;
+				width: 99%;
+			}
+			.tabbutton 
+			{
+				background-color: #e40046;
+				font-size: 130%;
+				color: white;
+				float: left;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 14px 16px;
+				width: 50%;
+			}
+			.tabbutton:hover 
+			{
+				background-color: #605a5a;
+			}
+			.tabcontent 
+			{
+				color: white;
+				display: none;
+				padding: 50px;
+				text-align: center;
+			}
+			#buyer 
+			{
+				background-color:#2d3238;
+			}
+			#seller 
+			{
+				background-color:#2d3238;
+			}
+		</style>
+	</head>
+	<body>
+	<!--confirm-->
+		<div class="topbar">
+				<a href="https://www.google.co.in"><!--go to home page-->
+				<img src="topbar_icon.jpg" alt="dealsaroundme_icon" style="float: left;" width="20%"></a>
+				<form  autocomplete="on">
+					<input type="textsearch" name="search" placeholder="Search.." style="float: left;" >
+					<div class="labeltext"><b>
+					<a href="https://www.google.co.in"><!--go to search database-->
+					<button type="button" class="searchbutton"  style="float: left;" required>search</button>
+					</div></b></a>
+				</form>
+				<div class="usersection">
+					<a href="https://www.google.co.in"><!--go to login section-->
+					<img src="iconregister.jpg" alt="user" style="float: right;" width="4.5%"></a>
+				</div>
+		</div>
+		<br></br>
+		<center>
+		<div class="opaque">
+				<font size="4%"><b>
+					<button class="tabbutton" onclick="colourbutton('buyer', this, '#2d3238')" id="defaultOpen">Customer</button>
+					<button class="tabbutton" onclick="colourbutton('seller', this, '#2d3238')">Seller</button>
+				</b></font>
+			<!--buyer-->
+			<div id="buyer" class="tabcontent">
+			  <form action="/action_page.php">
+						<b><br></br>
+						<div class="labeltext">
+						<font size="4%">
+							<center><label><b>Member Login</b></center></label>
+							<center><img src="Customerpic.jpg" alt="user" width="25%"></center>
+							<label><b>Username</b></label>
+							<br><input type="text" placeholder="username" name="bname" required></br>
+							<br><label><b>Password</b></label></br>
+							<input type="password" placeholder="password" name="bpsw" required></br>
+						</font>
+							<br><button type="submit">Login</button></br>
+						</div>
+							<br><input type="checkbox" checked="checked"> Remember me</br>
+							<span>
+								<a href="https://www.google.co.in">
+								<button type="button" class="buttonsmall" style="float: left;">Cancel</button></a>
+							</span>
+							<span style="float: right;">
+								<label><a href="https://www.google.co.in">
+								<font color="white">Forgot password?</font></p></a></label>
+						</span>
+						<br></br>
+						</b>
+					</form>
+			</div>
+			<!--seller-->
+			<div id="seller" class="tabcontent">
+				<form action="/action_page.php">
+					<b>
+						<br></br>
+						<div class="labeltext">
+						<font size="4%">
+							<center><label><b>Seller Login</b></center></label>
+							<center><img src="sellerpic.jpg" alt="user" width="25%"></center>
+							<label><b>Username</b></label>
+							<br><input type="text" placeholder="username" name="sname" required></br>
+							<br><label><b>Password</b></label></br>
+							<input type="password" placeholder="password" name="spsw" required></br>
+						</font>
+							<br><button type="submit">Login</button></br>
+						</div>
+							<br><input type="checkbox" checked="checked"> Remember me</br>
+							<span>
+								<a href="https://www.google.co.in">
+								<button type="button" class="buttonsmall" style="float: left;">Cancel</button></a>
+							</span>
+							<span style="float: right;">
+								<label><a href="https://www.google.co.in">
+								<font color="white">Forgot password?</font></p></a></label>
+							</span>
+						<br></br>
+					</b>
+				</form>	
+			</div>
+		</div>		
+	</center>
+	<script>
+	function colourbutton(buttonname,elmnt,color) 
+	{
+		var i, tabcontent, tabbuttons;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) 
+		{
+			tabcontent[i].style.display = "none";
+		}
+		tabbuttons = document.getElementsByClassName("tabbutton");
+		for (i = 0; i < tabbuttons.length; i++) 
+		{
+			tabbuttons[i].style.backgroundColor = "";
+		}
+		document.getElementById(buttonname).style.display = "block";
+		elmnt.style.backgroundColor = color;
+	}
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+	</script>
+	</body>
+</html> 
